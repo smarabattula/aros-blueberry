@@ -1,5 +1,18 @@
 # aros-blueberry
 ARoS Lab Blueberry Detection Project
+
 Used SAM and RoboFlow to annotate dataset
+
 blueberry.ipynb is used to crop the images using yellow thresholding
+
 blueberry_masks.ipynb is used to derive segmentation masks
+
+sasank_blueberry_segmentation_m1_12_7_23.ipynb file will be used in future for blueberry estimates. (Private file, people with access permissions can only view this notebook) https://colab.research.google.com/drive/1ngSXsuewDcP6LciYuCsQqSETubBaYhvT?usp=sharing
+
+# How to run?
+
+Make sure all required dependencies in your machine are installed (Mentioned all dependency installation in notebook already)
+
+Run the notebooks!
+
+
