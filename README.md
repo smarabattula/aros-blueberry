@@ -15,4 +15,9 @@ Make sure all required dependencies in your machine are installed (Mentioned all
 
 Run the notebooks!
 
+# Citations
+
+Roboflow. Supervision [Computer software]. https://github.com/roboflow/supervision
+
+Roboflow notebooks. https://github.com/roboflow/notebooks
 
