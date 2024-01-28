@@ -2,3 +2,6 @@ data/
 weights/
 blueberry_object_detection-20/
 blueberry_segmentation-2/
+blueberry_measurement_yolov8/
+runs
+yolov8n.pt
