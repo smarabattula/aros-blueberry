@@ -5,3 +5,6 @@ blueberry_segmentation-2/
 blueberry_measurement_yolov8/
 runs
 yolov8n.pt
+myenv/
+detectron2/
+docker-testing/
