@@ -8,3 +8,6 @@ yolov8n.pt
 myenv/
 detectron2/
 docker-testing/
+
+test_model/
+__pycache__/

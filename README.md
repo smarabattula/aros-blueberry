@@ -7,6 +7,13 @@ blueberry.ipynb is used to crop the images using yellow thresholding
 
 blueberry_masks.ipynb is used to derive segmentation masks
 
+blueberry_yolo.ipynb has the code to train a YOLOv8 model
+
+ColorCorrection.ipynb has code snippets used for performing color correction
+
+sagemaker_working.ipynb is used to deploy a Sagemaker endpoint for detectron2 model
+
+
 sasank_blueberry_segmentation_m1_12_7_23.ipynb file will be used in future for blueberry estimates. (Private file, people with access permissions can only view this notebook) https://colab.research.google.com/drive/1ngSXsuewDcP6LciYuCsQqSETubBaYhvT?usp=sharing
 
 # How to run?
