@@ -1,0 +1,37 @@
+# Use the SageMaker PyTorch container as the base image
+FROM 763104351884.dkr.ecr.us-east-1.amazonaws.com/pytorch-inference:1.11.0-cpu-py38-ubuntu20.04-sagemaker
+
+LABEL author="smaraba@ncsu.edu"
+
+############# Installing latest builds ############
+
+# Upgrade pip and install required packages
+RUN pip install --upgrade pip
+RUN pip install --upgrade torch torchvision cython
+
+############# Detectron2 section ##############
+# Installing dependencies for Detectron2
+RUN pip install 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
+RUN pip install 'git+https://github.com/facebookresearch/fvcore'
+
+# Install Detectron2 from the latest source
+RUN pip install 'git+https://github.com/facebookresearch/detectron2.git'
+
+# Set a fixed model cache directory required by Detectron2
+ENV FVCORE_CACHE="/tmp"
+
+# Set the environment variables required for CUDA (if using a GPU image)
+# ENV FORCE_CUDA="1"
+# ENV CUDA_HOME=/usr/local/cuda
+# ENV LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
+# ENV PATH=${CUDA_HOME}/bin:${PATH}
+
+# Set the entrypoint for serving the model
+ENV SAGEMAKER_PROGRAM inference.py
+ENV SAGEMAKER_SUBMIT_DIRECTORY /opt/ml/model/code
+
+# Copy the inference script to the container
+COPY ./container_serving/predict_coco.py /opt/ml/model/code/
+
+# Set the entrypoint for the container
+ENTRYPOINT ["python", "/opt/ml/model/code/predict_coco.py"]
