@@ -14,7 +14,7 @@ ColorCorrection.ipynb has code snippets used for performing color correction
 sagemaker_working.ipynb is used to deploy a Sagemaker endpoint for detectron2 model
 
 
-sasank_blueberry_segmentation_m1_12_7_23.ipynb file will be used in future for blueberry estimates. (Private file, people with access permissions can only view this notebook) https://colab.research.google.com/drive/1ngSXsuewDcP6LciYuCsQqSETubBaYhvT?usp=sharing
+sasank_blueberry_segmentation_m1_12_7_23.ipynb file will be used in future for blueberry estimates. (Private file, people with access permissions can only view this notebook) 
 
 # How to run?
 
